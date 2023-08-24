@@ -2,8 +2,22 @@
  Leetcode problem solving, task 48 - Solution by @pstktech
 
 Approach taken to solve the problem - TypeScript
+The approach to solving this problem involves iterating through the list of words and building lines of text while considering the maxWidth constraint. We use the variable str to build a line of text and the variable x to keep track of the starting index of words for the current line.
+
+Initialize an empty array res to store the justified lines of text.
+
+Initialize variables str and i to an empty string and 0, respectively. The variable n is used to store the number of words, and x is used to keep track of the starting index of words for the current line.
+
+Iterate through the words:
+If adding the next word to the current line str does not exceed the maxWidth, add the word and a space to str, and increment i.
+
+If adding the next word would exceed the maxWidth, adjust the line str by evenly distributing the extra spaces between words. Add the justified line str to the res array. Reset str and set x to i, and continue the iteration.
+
+After the iteration, if str is not empty, it means there are words left for the last line. Add extra spaces to make the line have exactly maxWidth characters, and then add it to the res array.
 
 
+
+___________________________
 Problem 68 description:
 
 "Given an array of strings words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.
